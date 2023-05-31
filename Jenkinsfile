@@ -1,14 +1,9 @@
 pipeline {
-    agent { docker { image 'maven:3.9.0-eclipse-temurin-11' } }
+    agent any
     stages {
         stage('build') {
             steps {
-                sh 'mvn --version'
-				sh 'echo "Hello World"'
-                sh '''
-                    echo "Multiline shell steps works too"
-                    ls -lah
-                '''
+                bat 'set'
             }
         }
     }
